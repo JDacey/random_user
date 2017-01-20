@@ -1,0 +1,306 @@
+/* variables */
+$brand-primary: #303247;
+$brand-secondary: #666;
+$brand-accent: #7cc3b5;
+$brand-text: #333;
+
+$font-xxlarge: 3rem;
+$font-xlarge: 2.5rem;
+$font-large: 2rem;
+$font-medium: 1.5rem;
+$font-small: 1.2rem;
+
+$break-large: 800px;
+$break-small: 600px;
+
+html {
+  font-family: arial;
+  color: $brand-primary;
+  font-size: 10px;
+}
+
+body {
+  background: #000 url("/images/site_back.jpg") top center no-repeat;
+  font-family: 'Rubik', sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $brand-text;
+  @media screen and (max-width: $break-small) {
+    background: #fff;
+  }
+}
+
+h1 {
+  font-size: $font-xxlarge;
+  color: $brand-primary;
+  font-family: 'Nothing You Could Do', cursive;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 70rem;
+  @media screen and (max-width: $break-small) {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* nav */
+
+.navbar.bg-inverse {
+  padding: 1rem 1.5rem .5rem 1.5rem;
+  background: $brand-primary!important;
+  .navbar-toggler {
+    top: 1.2rem;
+    border: none;
+  }
+  .navbar-brand {
+    font-size: $font-large;
+    font-family: 'Nothing You Could Do', cursive;
+  }
+}
+
+.main_content {
+  .card-block {
+    background: #fff url("/images/pattern_back.png") top left repeat-x;
+  }
+}
+
+.card {
+  border-radius: 0;
+  @media screen and (max-width: $break-small) {
+    border: 0;
+  }
+}
+
+/* carousel */
+
+.carousel {
+  border-bottom: .5rem solid $brand-accent;
+  height: 20rem;
+  @media screen and (max-width: $break-small) {
+    height: 15rem;
+  }
+  .image_mask {
+    background: $brand-primary;
+    height: 19.5rem;
+    overflow: hidden;
+    @media screen and (max-width: $break-small) {
+      height: 14.5rem;
+    }
+    img {
+      opacity: .5;
+    }
+  }
+  .item_2 .image_mask img {
+    position: relative;
+    top: -16rem;
+    @media screen and (max-width: $break-small) {
+      top: -4rem;
+    }
+  }
+  .carousel-caption {
+    h3 {
+      font-size: $font-xlarge;
+      font-family: 'Nothing You Could Do', cursive;
+      text-shadow: .1rem .1rem #333;
+    }
+    p {
+      font-size: $font-small;
+      font-weight: 400;
+    }
+  }
+  .carousel-indicators {
+    @media screen and (max-width: $break-small) {
+      display: none;
+    }
+  }
+}
+
+/* users table */
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(217,227,226, .4)
+}
+
+table.user_list {
+  background: #fff;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  td:nth-child(1) {
+    width: 10%;
+    @media screen and (max-width: $break-small) {
+      width: 20%;
+    }
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+    }
+  }
+  td:nth-child(2) {
+    font-weight: bold;
+  }
+  td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+    width: 30%;
+    text-transform: capitalize;
+    @media screen and (max-width: $break-small) {
+      width: 80%;
+    }
+  }
+  th:nth-child(3), th:nth-child(4), td:nth-child(3), td:nth-child(4) {
+    @media screen and (max-width: $break-small) {
+      display: none;
+    }
+  }
+  td:nth-child(1) {
+    img {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  }
+  tr:hover {
+    background: rgba(217,227,226, .7);
+    td:nth-child(1) {
+      img {
+        transition: .5s;
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 0;
+      }
+    }
+    td:nth-child(2) {
+      font-size: $font-large;
+    }
+  }
+  th {
+    border-bottom: none;
+    border-top: none;
+    font-size: $font-small;
+    letter-spacing: .1rem;
+    background: $brand-primary;
+    color: #fff;
+    font-weight: 500;
+  }
+  td {
+    padding: .5rem;
+    vertical-align: middle;
+    border-top: none;
+    font-size: $font-small;
+    font-weight: 400;
+  }
+}
+
+/* forms */
+
+.form-group {
+  font-size: $font-medium;
+  label {
+    color: $brand-secondary;
+    font-weight: 500;
+  }
+}
+
+/* users page */
+
+.users_all {
+  .row.header_bar {
+    span {
+      position: relative;
+      top: 2rem;
+      margin-left: 3rem;
+      margin-right: 1rem;
+      font-size: $font-medium;
+      @media screen and (max-width: $break-small) {
+        display: none;
+      }
+    }
+    input {
+        position: relative;
+        top: 2rem;
+        @media screen and (max-width: $break-small) {
+          margin-top: -4rem;
+          margin-bottom: 3rem;
+        }
+    }
+  }
+}
+
+/* user detail page */
+
+.user {
+  padding: 1.5rem;
+  h4 {
+    text-transform: capitalize;
+    font-size: $font-xxlarge;
+    font-family: 'Nothing You Could Do', cursive;
+    @media screen and (max-width: $break-small) {
+      text-align: center;
+    }
+  }
+  .user_image {
+    img {
+      border-bottom: .5rem solid $brand-accent;
+    }
+    @media screen and (max-width: $break-small) {
+      position: relative;
+      top: -8.5rem;
+      margin-bottom: -6.5rem;
+      text-align: center;
+      img {
+        border: .5rem solid $brand-accent;
+        border-radius: 50%;
+      }
+    }
+  }
+  .form-group {
+    @media screen and (max-width: $break-small) {
+      font-size: $font-small;
+      .col-sm-2 {
+        text-align: right;
+        width: 25%;
+      }
+      .col-sm-10 {
+        width: 75%;
+      }
+    }
+  }
+}
+
+/* collapse elements */
+
+#accordion {
+  margin-bottom: 1.5rem;
+  .card {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    .card-header {
+      background: #fff;
+      h5 {
+        position: relative;
+        top: .5rem;
+      }
+      .fa {
+        font-size: $font-large;
+        float: right;
+      }
+      .fa-sort-asc {
+
+      }
+      .fa-sort-desc {
+        position: relative;
+        top: -.8rem;
+      }
+    }
+    .card-block {
+      background: none;
+    }
+    .form-group {
+      font-size: $font-small;
+    }
+  }
+}

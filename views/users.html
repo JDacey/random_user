@@ -1,0 +1,41 @@
+<div class="users_all" ng-controller="userCtrl">
+
+  <div class="row header_bar">
+    <div class="col-md-8">
+      <h1>Users List</h1>
+    </div>
+
+    <div class="col-md-4">
+      <form class="form-inline my-2">
+        <span class="fa fa-search"></span>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search Users" ng-model="searchUsers">
+      </form>
+    </div>
+
+  </div>
+
+  <table class="table table-striped table-hover user_list animated fadeIn">
+    <thead>
+      <tr>
+        <th>
+          <span ng-show="myOrderBy == 'name.last' && !sortReverse" class="fa fa-sort-alpha-asc"></span>
+          <span ng-show="myOrderBy == 'name.last' && sortReverse" class="fa fa-sort-alpha-desc"></span>
+        </th>
+        <th ng-click="myOrderBy = 'name.last'; sortReverse = !sortReverse">
+          Name
+        </th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in userData  | orderBy:myOrderBy:sortReverse | filter:searchUsers" ng-click="showUserDetail(x)">
+        <td><img src="{{x.picture.thumbnail}}" class="animated zoomIn"/></td>
+        <td>{{x.name.first + ' ' + x.name.last}}</td>
+        <td>{{x.phone}}</td>
+        <td>{{x.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

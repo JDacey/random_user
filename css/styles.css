@@ -1,0 +1,219 @@
+/* variables */
+html {
+  font-family: arial;
+  color: #303247;
+  font-size: 10px; }
+
+body {
+  background: #000 url("/images/site_back.jpg") top center no-repeat;
+  font-family: 'Rubik', sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333; }
+  @media screen and (max-width: 600px) {
+    body {
+      background: #fff; } }
+
+h1 {
+  font-size: 3rem;
+  color: #303247;
+  font-family: 'Nothing You Could Do', cursive;
+  padding: 2rem; }
+
+.container {
+  width: 100%;
+  max-width: 70rem; }
+  @media screen and (max-width: 600px) {
+    .container {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0; } }
+
+/* nav */
+.navbar.bg-inverse {
+  padding: 1rem 1.5rem .5rem 1.5rem;
+  background: #303247 !important; }
+  .navbar.bg-inverse .navbar-toggler {
+    top: 1.2rem;
+    border: none; }
+  .navbar.bg-inverse .navbar-brand {
+    font-size: 2rem;
+    font-family: 'Nothing You Could Do', cursive; }
+
+.main_content .card-block {
+  background: #fff url("/images/pattern_back.png") top left repeat-x; }
+
+.card {
+  border-radius: 0; }
+  @media screen and (max-width: 600px) {
+    .card {
+      border: 0; } }
+
+/* carousel */
+.carousel {
+  border-bottom: 0.5rem solid #7cc3b5;
+  height: 20rem; }
+  @media screen and (max-width: 600px) {
+    .carousel {
+      height: 15rem; } }
+  .carousel .image_mask {
+    background: #303247;
+    height: 19.5rem;
+    overflow: hidden; }
+    @media screen and (max-width: 600px) {
+      .carousel .image_mask {
+        height: 14.5rem; } }
+    .carousel .image_mask img {
+      opacity: .5; }
+  .carousel .item_2 .image_mask img {
+    position: relative;
+    top: -16rem; }
+    @media screen and (max-width: 600px) {
+      .carousel .item_2 .image_mask img {
+        top: -4rem; } }
+  .carousel .carousel-caption h3 {
+    font-size: 2.5rem;
+    font-family: 'Nothing You Could Do', cursive;
+    text-shadow: .1rem .1rem #333; }
+  .carousel .carousel-caption p {
+    font-size: 1.2rem;
+    font-weight: 400; }
+  @media screen and (max-width: 600px) {
+    .carousel .carousel-indicators {
+      display: none; } }
+
+/* users table */
+.table-striped tbody tr:nth-of-type(odd) {
+  background: rgba(217, 227, 226, 0.4); }
+
+table.user_list {
+  background: #fff;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left; }
+  table.user_list td:nth-child(1) {
+    width: 10%; }
+    @media screen and (max-width: 600px) {
+      table.user_list td:nth-child(1) {
+        width: 20%; } }
+    table.user_list td:nth-child(1) img {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%; }
+  table.user_list td:nth-child(2) {
+    font-weight: bold; }
+  table.user_list td:nth-child(2), table.user_list td:nth-child(3), table.user_list td:nth-child(4) {
+    width: 30%;
+    text-transform: capitalize; }
+    @media screen and (max-width: 600px) {
+      table.user_list td:nth-child(2), table.user_list td:nth-child(3), table.user_list td:nth-child(4) {
+        width: 80%; } }
+  @media screen and (max-width: 600px) {
+    table.user_list th:nth-child(3), table.user_list th:nth-child(4), table.user_list td:nth-child(3), table.user_list td:nth-child(4) {
+      display: none; } }
+  table.user_list td:nth-child(1) img {
+    height: 3.5rem;
+    width: 3.5rem; }
+  table.user_list tr:hover {
+    background: rgba(217, 227, 226, 0.7); }
+    table.user_list tr:hover td:nth-child(1) img {
+      transition: .5s;
+      height: 4.5rem;
+      width: 4.5rem;
+      border-radius: 0; }
+    table.user_list tr:hover td:nth-child(2) {
+      font-size: 2rem; }
+  table.user_list th {
+    border-bottom: none;
+    border-top: none;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    background: #303247;
+    color: #fff;
+    font-weight: 500; }
+  table.user_list td {
+    padding: .5rem;
+    vertical-align: middle;
+    border-top: none;
+    font-size: 1.2rem;
+    font-weight: 400; }
+
+/* forms */
+.form-group {
+  font-size: 1.5rem; }
+  .form-group label {
+    color: #666;
+    font-weight: 500; }
+
+/* users page */
+.users_all .row.header_bar span {
+  position: relative;
+  top: 2rem;
+  margin-left: 3rem;
+  margin-right: 1rem;
+  font-size: 1.5rem; }
+  @media screen and (max-width: 600px) {
+    .users_all .row.header_bar span {
+      display: none; } }
+.users_all .row.header_bar input {
+  position: relative;
+  top: 2rem; }
+  @media screen and (max-width: 600px) {
+    .users_all .row.header_bar input {
+      margin-top: -4rem;
+      margin-bottom: 3rem; } }
+
+/* user detail page */
+.user {
+  padding: 1.5rem; }
+  .user h4 {
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-family: 'Nothing You Could Do', cursive; }
+    @media screen and (max-width: 600px) {
+      .user h4 {
+        text-align: center; } }
+  .user .user_image img {
+    border-bottom: 0.5rem solid #7cc3b5; }
+  @media screen and (max-width: 600px) {
+    .user .user_image {
+      position: relative;
+      top: -8.5rem;
+      margin-bottom: -6.5rem;
+      text-align: center; }
+      .user .user_image img {
+        border: 0.5rem solid #7cc3b5;
+        border-radius: 50%; } }
+  @media screen and (max-width: 600px) {
+    .user .form-group {
+      font-size: 1.2rem; }
+      .user .form-group .col-sm-2 {
+        text-align: right;
+        width: 25%; }
+      .user .form-group .col-sm-10 {
+        width: 75%; } }
+
+/* collapse elements */
+#accordion {
+  margin-bottom: 1.5rem; }
+  #accordion .card {
+    border-top: none;
+    border-left: none;
+    border-right: none; }
+    #accordion .card .card-header {
+      background: #fff; }
+      #accordion .card .card-header h5 {
+        position: relative;
+        top: .5rem; }
+      #accordion .card .card-header .fa {
+        font-size: 2rem;
+        float: right; }
+      #accordion .card .card-header .fa-sort-desc {
+        position: relative;
+        top: -.8rem; }
+    #accordion .card .card-block {
+      background: none; }
+    #accordion .card .form-group {
+      font-size: 1.2rem; }
+
+/*# sourceMappingURL=styles.css.map */
