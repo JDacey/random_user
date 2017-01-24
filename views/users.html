@@ -5,6 +5,8 @@
       <h1>Users List</h1>
     </div>
 
+
+
     <div class="col-md-4">
       <form class="form-inline my-2">
         <span class="fa fa-search"></span>
@@ -37,5 +39,8 @@
       </tr>
     </tbody>
   </table>
+
+  <h3>Total Users <span class="badge badge-default">{{userData.length}}</span></h3>
+  <h3>Returned Users <span class="badge badge-default">{{(userData|filter:searchUsers).length}}</span></h3>
 
 </div>
